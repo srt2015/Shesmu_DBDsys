@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>DBDsys by Tibor Roskó</title><meta name="author" content="Roskó Tibor"/>
+		<meta name="copyright" content="Roskó Tibor - 2020"/>
+		<meta name="generator" content="Notepad++"/>
+		<link rel="author" href="http://rtibor.hu"/>
+		
+		<meta name="description" content="DBDsys QR-code generator demo"/>
+		<meta name="keywords" content=""/>
+		<meta name="robots" content="index, follow"/>
+		<meta charset="utf-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	</head>
+	<body>
+		<main>
+			<h1>DBDsys QR-code generator demo</h1>
+			<form id="recipient_input_Form" name="recipient_input_Form" method="POST" action="processing.php" target="log">
+				<label for="family_name">recipient_family_name</label>
+				<input type="text" name="family_name" id="family_name"/><br/><br/>
+				
+				<label for="last_name">recipient_last_name</label>
+				<input type="text" name="last_name" id="last_name"/><br/><br/>
+				
+				<label for="born_date">recipient_born_date</label>
+				<input type="text" name="born_date" id="born_date" placeholder="format: YYYY-MM-DD"/><br/><br/>
+				
+				<label for="taj_number">recipient_taj_number</label>
+				<input type="text" name="taj_number" id="taj_number" placeholder="Only numbers"/><br/><br/>
+				
+				<label for="blood_type">recipient_blood_type</label>
+				<select name="blood_type" id="blood_type">
+					<option value="">Choose one...</option>
+					<option value="0+">0+</option>
+					<option value="0-">0-</option>
+					<option value="A+">A+</option>
+					<option value="A-">A-</option>
+					<option value="B+">B+</option>
+					<option value="B-">B-</option>
+					<option value="AB+">AB+</option>
+					<option value="AB-">AB-</option>
+				</select><br/><br/>
+				
+				<label for="hospital_city">hospital_city</label>
+				<input type="text" name="hospital_city" id="hospital_city"/><br/><br/>
+				
+				<label for="hospital_name">hospital_name</label>
+				<input type="text" name="hospital_name" id="hospital_name"/><br/><br/>
+				
+				<label for="hospital_department">hospital_department</label>
+				<input type="text" name="hospital_department" id="hospital_department"/><br/><br/>
+				
+				<label for="authority_by">authority_by</label>
+				<select name="authority_by" id="authority_by">
+					<option value="">Choose one...</option>
+					<option value="S01">Enter my own data</option>
+					<option value="M01">I am allowed to enter another person's data</option>
+				</select><br/><br/>
+			
+				<br/>
+				<input type="submit" name="recipient_input_Form_Submit" id="recipient_input_Form_Submit" value="Generate QR-code"/>
+			</form><br/><br/>
+			<p>Messages</p>
+			<iframe id='log' name='log' style='width:500px; height:150px;'></iframe>
+		</main>
+	</body>
+</html>
